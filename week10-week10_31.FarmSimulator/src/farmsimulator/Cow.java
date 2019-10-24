@@ -40,12 +40,11 @@ public class Cow implements Milkable, Alive {
     }
     
     private static final String[] NAMES = new String[]{
-        "Anu", "Arpa", "Essi", "Heluna", "Hely",
-        "Hento", "Hilke", "Hilsu", "Hymy", "Ihq", "Ilme", "Ilo",
-        "Jaana", "Jami", "Jatta", "Laku", "Liekki",
-        "Mainikki", "Mella", "Mimmi", "Naatti",
-        "Nina", "Nyytti", "Papu", "Pullukka", "Pulu",
-        "Rima", "Soma", "Sylkki", "Valpu", "Virpi"};
+        "Adrian", "Anthony", "Barry", "Charlie", "Dexter",
+         "Evelyn", "Eileen", "Fergal", "Gavin", "Harry", "Imogen", "James", "Jonno",
+        "Kevin", "Louis", "Michael", "Neil", "Oliver", "Pat", "Philip",
+        "Quentin", "Roger", "Stephen", "Tarantino", "Ungur",
+        "Vivien", "Walter", "Xavier", "Yvonne", "Zane", "Zeus"};
 
     @Override
     public double milk() {
