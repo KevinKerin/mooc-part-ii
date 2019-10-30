@@ -23,14 +23,17 @@ public class MindfulDictionary {
 
     private Map<String, String> dictionary;
     private String file;
+    public Scanner reader;
 
     public MindfulDictionary() {
         dictionary = new HashMap<String, String>();
+        reader = new Scanner(System.in);
     }
 
     public MindfulDictionary(String file) {
         dictionary = new HashMap<String, String>();
         this.file = file;
+        reader = new Scanner(System.in);
     }
 
     public boolean load() {
@@ -48,16 +51,44 @@ public class MindfulDictionary {
             return false;
         }
     }
-    
-    public boolean save(){
+
+    public void run() {
+        System.out.println("Enter a command:" + "\n");
+        System.out.println("[1] Translate word" + "\n");
+        System.out.println("[2] Add new word" + "\n");
+        String str = reader.nextLine();
+        if (str.equals("1")) {
+            System.out.print("\nEnter word to be translated: ");
+            String word = reader.nextLine();
+            String translation = translate(word);
+            if(translation == null){
+                System.out.println("Word not found.");
+                run();
+            } else {
+                System.out.println("Translation: " + translation);
+                run();
+            }
+        } else if (str.equals("2")) {
+            System.out.print("Enter word in English: ");
+            String key = reader.nextLine();
+            System.out.println("");
+            System.out.print("Enter word in Irish: ");
+            String value = reader.nextLine();
+            add(key, value);
+            System.out.println("New entry to dictionary complete. " + key + " = " + value);
+            run();
+        }
+    }
+
+    public boolean save() {
         try {
             FileWriter fw = new FileWriter(file);
-            for (Entry<String, String> entry : dictionary.entrySet()){
+            for (Entry<String, String> entry : dictionary.entrySet()) {
                 fw.write(entry.getKey() + ":" + entry.getValue() + "\n");
             }
             fw.close();
             return true;
-        } catch (IOException e){
+        } catch (IOException e) {
             return false;
         }
     }

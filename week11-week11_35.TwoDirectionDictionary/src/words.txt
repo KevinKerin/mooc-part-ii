@@ -1,11 +1,13 @@
+glass:gloinne
 horse:capall
 seat:suiochain
 madra:dog
-glass:gloinne
 computer:riomhaire
 phone:fon
+eileen:Eibhlin
 cat:cat
 bird:ean
+hey:sea
 table:bord
 jumper:geansai
 cup:cupan
