@@ -1,0 +1,11 @@
+horse:capall
+seat:suiochain
+madra:dog
+glass:gloinne
+computer:riomhaire
+phone:fon
+cat:cat
+bird:ean
+table:bord
+jumper:geansai
+cup:cupan
